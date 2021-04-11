@@ -45,7 +45,7 @@ The information below is valid only to the OS: **Linux (recommend Ubuntu 20.04).
 
 ---
 Using jumpers, connect the TELEM 2 (Pixhawk) via USB-Serial adapter to an USB on the Raspberry Pi4.
-See the link below for more information:
+**See the link below for more information:**
 
 https://dev.px4.io/master/en/companion_computer/pixhawk_companion.html#hardware-setup
 <h3>
@@ -132,6 +132,7 @@ or
 <h3>
   11. In the Host pc, another LINUX computer, install the MAVproxy and DroneKit:
 </h3>
+
 ---
 <pre>
     <code>$ sudo -H pip3 install mavproxy
@@ -149,10 +150,12 @@ or
 <h3>
   13. Use the code magnetometer.py in the folder Examples/ to take the values of the magnetometer sensor.
 </h3>
+
 ---
 <h3>
   14. Type this line to connect to Pixhawk: 
 </h3>
+
 ---
 <pre>
     <code>$ python3 mag_pix4.py --connect "192.168.0.103:14551"
