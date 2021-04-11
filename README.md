@@ -114,12 +114,13 @@ or
 </code></pre>
 <h3>
   9. Enable SSH on Raspberry Pi 4:
-<h3>
+</h3>
   
 ---
 <pre>
     <code>$ raspi-config
 </code></pre>
+
 <h3>
   10. Go to [ Interfacing Options > SSH > Yes > Finish ]. And now reboot:
 </h3>
@@ -128,7 +129,7 @@ or
 <pre>
     <code>$ sudo reboot now
 </code></pre>
-</h3>
+<h3>
   11. In the Host pc, another LINUX computer, install the MAVproxy and DroneKit:
 </h3>
 ---
@@ -137,17 +138,21 @@ or
     $ sudo -H pip3 install dronekit
     $ sudo -H pip3 install pymavlink
 </code></pre>
-12.	Clone the dronekit-python repository in the Host PC (Linux recommended): 
-	
+<h3>
+  12. Clone the dronekit-python repository in the Host PC (Linux recommended): 
+<h3>
+
 ---
 <pre>
     <code>$ git clone https://github.com/dronekit/dronekit-python.git
 </code></pre>
-13.	Use the code magnetometer.py in the folder Examples/ to take the values of the magnetometer sensor.
-
+<h3>
+  13. Use the code magnetometer.py in the folder Examples/ to take the values of the magnetometer sensor.
+</h3>
 ---
-14.	Type this line to connect to Pixhawk: 
-
+<h3>
+  14. Type this line to connect to Pixhawk: 
+</h3>
 ---
 <pre>
     <code>$ python3 mag_pix4.py --connect "192.168.0.103:14551"
