@@ -7,13 +7,11 @@ This report instructs how to make the connection between a Pixhawk PX4 and a Ras
 The information below is valid only to the OS: **Linux (recommend Ubuntu 20.04).**
 </p>
 <h3>
-  <span>
   1. Connect the Pixhawk with QGroundControl and configure the following Pixhawk parameters:
-  </span>
 </h3>
 
 ---
-
+<p>
 
 **SERIAL2_PROTOCOL = 1 (Mavlink 1 = 1 or Mavlink 2 = 2)**
 
@@ -36,7 +34,7 @@ The information below is valid only to the OS: **Linux (recommend Ubuntu 20.04).
 **COM_OBL_RC_ACT = land**
 
 **CBRK_IO_SAFETY = no check**
-
+</p>
 <h3>
 2.	Using jumpers, connect the TELEM 2 (Pixhawk) via USB-Serial adapter to an USB on the Raspberry Pi 4.
 </h3>
@@ -44,6 +42,7 @@ The information below is valid only to the OS: **Linux (recommend Ubuntu 20.04).
 ---
 **See the link below for more information:**
 https://dev.px4.io/master/en/companion_computer/pixhawk_companion.html#hardware-setup
+
 <h3>
   3.	Run the code below to see which USB port the Pixhawk is connected: 
 </h3>
@@ -55,14 +54,25 @@ lsusb
 
 The device ID is important to the next step (the ID number is likely to change);
 
-####4.	Run the line below to change the USB rules:
+<h3>
+4.	Run the line below to change the USB rules:
+</h3>
+
+---
+```
 sudo nano /etc/udev/rules.d/99-pixhawk.rules
-####5.	Enter this line with the correct ID code: 
+```
+<h3>
+5.	Enter this line with the correct ID code:
+</h3>
+
+---
 ```
 SUBSYSTEM=="tty", ATTRS{idVendor}=="0403", ATTRS{idProduct}=="6001", SYMLINK+="ttyPix4"
 ```
-
-####6.	Run these commands to update and upgrade the packages in the Raspberry Pi 4 : sudo apt-get update
+<h3>
+6.	Run these commands to update and upgrade the packages in the Raspberry Pi 4 : sudo apt-get update
+</h3>
 
 sudo apt-get upgrade
 
