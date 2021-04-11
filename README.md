@@ -55,8 +55,7 @@ https://dev.px4.io/master/en/companion_computer/pixhawk_companion.html#hardware-
 ---
 <pre>
   <code>$ lsusb
-  </code>
-</pre>
+</code></pre>
 <p>
   The device ID is important to the next step (the ID number is likely to change);
 </p>
@@ -67,8 +66,7 @@ https://dev.px4.io/master/en/companion_computer/pixhawk_companion.html#hardware-
 ---
 <pre>
   <code>$ sudo nano /etc/udev/rules.d/99-pixhawk.rules
-  </code>
-</pre>
+</code></pre>
 <h3>
   5. Enter this line with the correct ID code:
 </h3>
@@ -76,8 +74,7 @@ https://dev.px4.io/master/en/companion_computer/pixhawk_companion.html#hardware-
 ---
 <pre>
   <code>$ SUBSYSTEM=="tty", ATTRS{idVendor}=="0403", ATTRS{idProduct}=="6001", SYMLINK+="ttyPix4"
-  </code>
-</pre>
+</code></pre>
 <h3>
 6. Run these commands to update and upgrade the packages in the Raspberry Pi 4 : 
 </h3>
@@ -141,7 +138,7 @@ or
 </code></pre>
 <h3>
   12. Clone the dronekit-python repository in the Host PC (Linux recommended): 
-<h3>
+</h3>
 
 ---
 <pre>
