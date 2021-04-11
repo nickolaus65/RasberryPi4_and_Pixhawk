@@ -34,6 +34,7 @@ The information below is valid only to the OS: **Linux (recommend Ubuntu 20.04).
 **COM_OBL_RC_ACT = land**
 
 **CBRK_IO_SAFETY = no check**
+
 </p>
 <h3>
 2.	Using jumpers, connect the TELEM 2 (Pixhawk) via USB-Serial adapter to an USB on the Raspberry Pi 4.
@@ -42,7 +43,6 @@ The information below is valid only to the OS: **Linux (recommend Ubuntu 20.04).
 ---
 **See the link below for more information:**
 https://dev.px4.io/master/en/companion_computer/pixhawk_companion.html#hardware-setup
-
 <h3>
   3.	Run the code below to see which USB port the Pixhawk is connected: 
 </h3>
@@ -53,7 +53,6 @@ lsusb
 ```
 
 The device ID is important to the next step (the ID number is likely to change);
-
 <h3>
 4.	Run the line below to change the USB rules:
 </h3>
@@ -74,16 +73,14 @@ SUBSYSTEM=="tty", ATTRS{idVendor}=="0403", ATTRS{idProduct}=="6001", SYMLINK+="t
 6.	Run these commands to update and upgrade the packages in the Raspberry Pi 4 : sudo apt-get update
 </h3>
 
-sudo apt-get upgrade
-
-sudo apt-get install screen python-wxgtk3.0 python-matplotlib python-opencv python-pip python-numpy python-dev libxml2-dev libxslt-dev
+---
 <pre><code>
-
+$ sudo apt-get upgrade
+$ sudo apt-get install screen python-wxgtk3.0 python-matplotlib python-opencv python-pip python-numpy python-dev libxml2-dev libxslt-dev
 $	sudo pip3 install future
 $	sudo pip3 install pymavlink
 $	sudo pip3 install mavproxy
-$	sudo reboot now     (This step is necessary to compile all the changes)
-
+$ sudo reboot now   (This step is necessary to compile all the changes)
 </code>
 </pre>
 
