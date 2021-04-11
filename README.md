@@ -7,6 +7,9 @@ This report instructs how to make the connection between a Pixhawk PX4 and a Ras
 The information below is valid only to the OS: **Linux (recommend Ubuntu 20.04).**
 </p>
 <h3>
+  Pixhawk:
+</h3>
+<h3>
   1. Connect the Pixhawk with QGroundControl and configure the following Pixhawk parameters:
 </h3>
 
@@ -70,16 +73,16 @@ sudo nano /etc/udev/rules.d/99-pixhawk.rules
 SUBSYSTEM=="tty", ATTRS{idVendor}=="0403", ATTRS{idProduct}=="6001", SYMLINK+="ttyPix4"
 ```
 <h3>
-6.	Run these commands to update and upgrade the packages in the Raspberry Pi 4 : sudo apt-get update
+6.	Run these commands to update and upgrade the packages in the Raspberry Pi 4 : 
 </h3>
 
----
 <pre><code>
+$ sudo apt-get update
 $ sudo apt-get upgrade
 $ sudo apt-get install screen python-wxgtk3.0 python-matplotlib python-opencv python-pip python-numpy python-dev libxml2-dev libxslt-dev
-$	sudo pip3 install future
-$	sudo pip3 install pymavlink
-$	sudo pip3 install mavproxy
+$ sudo pip3 install future
+$ sudo pip3 install pymavlink
+$ sudo pip3 install mavproxy
 $ sudo reboot now   (This step is necessary to compile all the changes)
 </code>
 </pre>
