@@ -7,7 +7,7 @@ This report instructs how to make the connection between a Pixhawk PX4 and a Ras
 The information below is valid only to the OS: **Linux (recommend Ubuntu 20.04).**
 </p>
 <h3>
-  Pixhawk:
+ # Pixhawk:
 </h3>
 <h3>
   1. Connect the Pixhawk with QGroundControl and configure the following Pixhawk parameters:
@@ -49,6 +49,9 @@ Using jumpers, connect the TELEM 2 (Pixhawk) via USB-Serial adapter to an USB on
 
 https://dev.px4.io/master/en/companion_computer/pixhawk_companion.html#hardware-setup
 <h3>
+<h3>
+ # Raspberry Pi4:
+</h3>
   3. Run the code below to see which USB port the Pixhawk is connected: 
 </h3>
 
