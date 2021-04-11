@@ -79,13 +79,13 @@ https://dev.px4.io/master/en/companion_computer/pixhawk_companion.html#hardware-
 6. Run these commands to update and upgrade the packages in the Raspberry Pi 4 : 
 </h3>
 <pre>
-    <code>$ sudo apt-get update
-    $ sudo apt-get upgrade
-    $ sudo apt-get install screen python-wxgtk3.0 python-matplotlib python-opencv python-pip python-numpy python-dev libxml2-dev libxslt-dev
-    $ sudo pip3 install future
-    $ sudo pip3 install pymavlink
-    $ sudo pip3 install mavproxy
-    $ sudo reboot now   (This step is necessary to compile all the changes)
+  <code>$ sudo apt-get update
+  $ sudo apt-get upgrade
+  $ sudo apt-get install screen python-wxgtk3.0 python-matplotlib python-opencv python-pip python-numpy python-dev libxml2-dev libxslt-dev
+  $ sudo pip3 install future
+  $ sudo pip3 install pymavlink
+  $ sudo pip3 install mavproxy
+  $ sudo reboot now   (This step is necessary to compile all the changes)
 </code></pre>
 <h3>
   7. Test the connection between Pixhawk and Raspberry Pi 4: 
@@ -93,9 +93,9 @@ https://dev.px4.io/master/en/companion_computer/pixhawk_companion.html#hardware-
 
 ---
 <pre>
-    <code>$ sudo su
-    $ mavproxy.py --master=/dev/ttyPix4 --baudrate 921600 --out=udp:192.168.0.102:14550 --out=udp:192.168.0.103:14550 --aircraft MyCopter
-    ("--aircraft" will be the folder to store the logs files.)
+  <code>$ sudo su
+  $ mavproxy.py --master=/dev/ttyPix4 --baudrate 921600 --out=udp:192.168.0.102:14550 --out=udp:192.168.0.103:14550 --aircraft MyCopter
+  ("--aircraft" will be the folder to store the logs files.)
 </code></pre>
 <h3>
 8. Install SSH on a Linux machine:
@@ -103,11 +103,11 @@ https://dev.px4.io/master/en/companion_computer/pixhawk_companion.html#hardware-
 
 ---
 <pre>
-    <code>$ sudo apt-get install ssh
+  <code>$ sudo apt-get install ssh
 </code></pre>
 or
 <pre>
-    <code>$ sudo apt-get install openssh-client
+  <code>$ sudo apt-get install openssh-client
 </code></pre>
 <h3>
   9. Enable SSH on Raspberry Pi 4:
@@ -115,7 +115,7 @@ or
   
 ---
 <pre>
-    <code>$ raspi-config
+  <code>$ raspi-config
 </code></pre>
 
 <h3>
@@ -124,7 +124,7 @@ or
 
 ---
 <pre>
-    <code>$ sudo reboot now
+  <code>$ sudo reboot now
 </code></pre>
 <h3>
   11. In the Host pc, another LINUX computer, install the MAVproxy and DroneKit:
@@ -132,9 +132,10 @@ or
 
 ---
 <pre>
-    <code>$ sudo -H pip3 install mavproxy
-    $ sudo -H pip3 install dronekit
-    $ sudo -H pip3 install pymavlink
+  <code>$ sudo -H pip3 install mavproxy
+  $ sudo -H pip3 install dronekit
+  $ sudo -H pip3 install pymavlink
+  $ sudo -H pip3 install pymavlink
 </code></pre>
 <h3>
   12. Clone the dronekit-python repository in the Host PC (Linux recommended): 
@@ -142,7 +143,7 @@ or
 
 ---
 <pre>
-    <code>$ git clone https://github.com/dronekit/dronekit-python.git
+  <code>$ git clone https://github.com/dronekit/dronekit-python.git
 </code></pre>
 <h3>
   13. Use the code magnetometer.py in the folder Examples/ to take the values of the magnetometer sensor.
@@ -155,5 +156,5 @@ or
 
 ---
 <pre>
-    <code>$ python3 mag_pix4.py --connect "192.168.0.103:14551"
+  <code>$ python3 mag_pix4.py --connect "192.168.0.103:14551"
 </code></pre>
