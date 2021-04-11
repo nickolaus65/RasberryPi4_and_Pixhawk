@@ -51,9 +51,9 @@ https://dev.px4.io/master/en/companion_computer/pixhawk_companion.html#hardware-
 </h3>
 
 ---
-```
-lsusb
-```
+<pre><code>$ lsusb
+</code>
+</pre>
 
 The device ID is important to the next step (the ID number is likely to change);
 <h3>
@@ -61,23 +61,22 @@ The device ID is important to the next step (the ID number is likely to change);
 </h3>
 
 ---
-```
-sudo nano /etc/udev/rules.d/99-pixhawk.rules
-```
+<pre><code>$ sudo nano /etc/udev/rules.d/99-pixhawk.rules
+</code>
+</pre>
 <h3>
 5.	Enter this line with the correct ID code:
 </h3>
 
 ---
-```
-SUBSYSTEM=="tty", ATTRS{idVendor}=="0403", ATTRS{idProduct}=="6001", SYMLINK+="ttyPix4"
-```
+<pre><code>$ SUBSYSTEM=="tty", ATTRS{idVendor}=="0403", ATTRS{idProduct}=="6001", SYMLINK+="ttyPix4"
+</code>
+</pre>
 <h3>
 6.	Run these commands to update and upgrade the packages in the Raspberry Pi 4 : 
 </h3>
 
-<pre><code>
-$ sudo apt-get update
+<pre><code>$ sudo apt-get update
 $ sudo apt-get upgrade
 $ sudo apt-get install screen python-wxgtk3.0 python-matplotlib python-opencv python-pip python-numpy python-dev libxml2-dev libxslt-dev
 $ sudo pip3 install future
@@ -88,11 +87,12 @@ $ sudo reboot now   (This step is necessary to compile all the changes)
 </pre>
 
 7.	Test the connection between Pixhawk and Raspberry Pi 4: 
-sudo -s
+<pre><code>$ sudo su
+</code>
+</pre>
 
-
-mavproxy.py --master=/dev/ttyPix4 --baudrate 921600 --out=udp:192.168.0.102:14550 --out=udp:192.168.0.103:14550 --aircraft MyCopter
-(*--aircraft will be the folder to store the logs files.)
+<pre><code>$ mavproxy.py --master=/dev/ttyPix4 --baudrate 921600 --out=udp:192.168.0.102:14550 --out=udp:192.168.0.103:14550 --aircraft MyCopter    ("--aircraft" will be the folder to store the logs files.)
+</pre>
 8.	Install SSH on a Linux machine: 
 sudo apt-get install ssh
 or
