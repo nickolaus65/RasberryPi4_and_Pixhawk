@@ -36,7 +36,7 @@ layout =[
 window = spg.Window('MAG', layout)
 
 #Magnetometer axis gathering.
-timeout = 10    #[seconds]
+timeout = 20    #[seconds]
 
 while True:   
     event, values = window.Read()
