@@ -138,7 +138,6 @@ or
   <code>$ sudo -H pip3 install mavproxy
   $ sudo -H pip3 install dronekit
   $ sudo -H pip3 install pymavlink
-  $ sudo -H pip3 install pymavlink
 </code></pre>
 <h3>
   12. Clone the dronekit-python repository in the Host PC (Linux recommended): 
