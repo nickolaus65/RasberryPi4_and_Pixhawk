@@ -149,7 +149,7 @@ or
   <code>$ git clone https://github.com/dronekit/dronekit-python.git
 </code></pre>
 <h3>
-  13. Use the code magnetometer.py in the folder Examples/ to take the values of the magnetometer sensor.
+  13. Use the code magnetometer.py in the folder Examples/ to take the values of the magnetometer sensor as an example.
 </h3>
 
 ---
@@ -161,3 +161,16 @@ or
 <pre>
   <code>$ python3 mag_pix4.py --connect "192.168.0.103:14551"
 </code></pre>
+
+---
+<h3>
+References
+</h3>
+
+---
+<p>
+https://dronekit.netlify.app/
+https://docs.px4.io/v1.9.0/en/advanced_config/parameter_reference.html
+https://dev.px4.io/master/en/companion_computer/pixhawk_companion.html#hardware-setup
+https://github.com/yingshaoxo/suicide-squad/tree/master/PX4
+</p>
