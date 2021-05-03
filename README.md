@@ -168,8 +168,8 @@ References
 
 ---
 <p>
-https://dronekit.netlify.app/
-https://docs.px4.io/v1.9.0/en/advanced_config/parameter_reference.html
-https://dev.px4.io/master/en/companion_computer/pixhawk_companion.html#hardware-setup
-https://github.com/yingshaoxo/suicide-squad/tree/master/PX4
+  https://dronekit.netlify.app/
+  https://docs.px4.io/v1.9.0/en/advanced_config/parameter_reference.html
+  https://dev.px4.io/master/en/companion_computer/pixhawk_companion.html#hardware-setup
+  https://github.com/yingshaoxo/suicide-squad/tree/master/PX4
 </p>
