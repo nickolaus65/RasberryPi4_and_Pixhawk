@@ -158,7 +158,7 @@ or
 
 ---
 <pre>
-  <code>$ python3 mag_pix4.py --connect "192.168.0.103:14551"
+  <code>$ python3 mag_pix4.py --connect "0.0.0.0:14551"
 </code></pre>
 
 ---
