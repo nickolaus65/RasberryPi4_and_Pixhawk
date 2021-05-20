@@ -97,7 +97,7 @@ https://dev.px4.io/master/en/companion_computer/pixhawk_companion.html#hardware-
 ---
 <pre>
   <code>$ sudo su
-  $ mavproxy.py --master=/dev/ttyPix4 --baudrate 921600 --out=udp:192.168.0.102:14550 --out=udp:192.168.0.103:14550 --aircraft MyCopter
+  $ mavproxy.py --master=/dev/ttyPix4 --baudrate 921600 --out=udp:0.0.0.0:14550 --out=udp:0.0.0.0:14551 --aircraft MyCopter
   ("--aircraft" will be the folder to store the logs files.)
 </code></pre>
 <h3>
