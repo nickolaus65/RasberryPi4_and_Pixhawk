@@ -82,12 +82,12 @@ https://dev.px4.io/master/en/companion_computer/pixhawk_companion.html#hardware-
 6. Run these commands to update and upgrade the packages in the Raspberry Pi 4 : 
 </h3>
 <pre>
-  <code>$ sudo apt-get update
-  $ sudo apt-get upgrade
-  $ sudo apt-get install screen python-wxgtk3.0 python-matplotlib python-opencv python-pip python-numpy python-dev libxml2-dev libxslt-dev
+  <code>$ sudo apt-get install screen python-wxgtk3.0 python-matplotlib python-opencv python-pip python-numpy python-dev libxml2-dev libxslt-dev
   $ sudo pip3 install future
   $ sudo pip3 install pymavlink
   $ sudo pip3 install mavproxy
+  $ sudo apt-get update
+  $ sudo apt-get upgrade
   $ sudo reboot now   (This step is necessary to compile all the changes)
 </code></pre>
 <h3>
