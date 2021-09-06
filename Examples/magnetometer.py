@@ -59,7 +59,9 @@ while True:
         file.write(str(mag_axis)+'\n')
 
         t_start = time.time()
+        
         while time.time() <= t_start + timeout: 
+            
             print ('mag_X: {0}  mag_Y: {1}  mag_Z: {2}'.format(
                 vehicle._master.messages['RAW_IMU'].xmag,
                 vehicle._master.messages['RAW_IMU'].ymag,
