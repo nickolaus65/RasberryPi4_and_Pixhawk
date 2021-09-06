@@ -76,7 +76,7 @@ https://dev.px4.io/master/en/companion_computer/pixhawk_companion.html#hardware-
 
 ---
 <pre>
-  <code>$ SUBSYSTEM=="tty", ATTRS{idVendor}=="0403", ATTRS{idProduct}=="6001", SYMLINK+="ttyPix4"
+  <code>$ SUBSYSTEM=="tty", ATTRS{idVendor}=="HERE", ATTRS{idProduct}=="HERE", SYMLINK+="ttyPix4"
 </code></pre>
 <h3>
 6. Run these commands to update and upgrade the packages in the Raspberry Pi 4 : 
@@ -98,7 +98,7 @@ https://dev.px4.io/master/en/companion_computer/pixhawk_companion.html#hardware-
 <pre>
   <code>$ sudo su
   $ mavproxy.py --master=/dev/ttyPix4 --baudrate 921600 --out=udp:0.0.0.0:14550 --out=udp:0.0.0.0:14551 --aircraft MyCopter
-  ("--aircraft" will be the folder to store the logs files.)
+  ("--aircraft" will be the folder to store the log files.)
 </code></pre>
 <h3>
 8. Install SSH on a Linux machine:
