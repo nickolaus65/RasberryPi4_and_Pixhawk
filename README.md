@@ -2,9 +2,9 @@
   RasberryPi4_and_Pixhawk.
 </h1>
 <p>
-This report instructs how to make the connection between a Pixhawk PX4 and a Raspberry Pi 4 using the MAVLink Protocol to control the drone remotely and see it information.
+This report instructs how to make the connection between a Pixhawk (all versions) and a Raspberry Pi 4 using the MAVLink Protocol to control the drone remotely and see it information.
   
-The information below is valid only to the OS: **Linux (recommend Ubuntu 20.04).**
+The information below is valid only to the OS: **Linux (recommend Ubuntu 20.04 or later).**
 </p>
 <h3>
  # Pixhawk:
