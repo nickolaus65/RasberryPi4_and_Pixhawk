@@ -2,12 +2,12 @@
   RasberryPi4_and_Pixhawk.
 </h1>
 <p>
-This report instructs how to make the connection between a Pixhawk (all versions) and a Raspberry Pi 4 using the MAVLink Protocol to control the drone remotely and see it information.
+This report instructs how to make the connection between a Pixhawk (all versions) and a Raspberry Pi 4 using the MAVLink Protocol to control the drone remotely and see it information. Please go to the tab Issues if something goes wrong or needs changes!
   
-The information below is valid only to the OS: **Linux (recommend Ubuntu 20.04 or later).**
+The information below is valid only to the OS: **Linux (recommend Ubuntu 20.04 or later).** and **RASPBIAN**
 </p>
 <h3>
- # Pixhawk:
+  # Pixhawk:
 </h3>
 <h3>
   1. Connect the Pixhawk with QGroundControl and configure the following Pixhawk parameters:
@@ -62,6 +62,7 @@ https://dev.px4.io/master/en/companion_computer/pixhawk_companion.html#hardware-
 <p>
   The device ID is important to the next step (the ID number is likely to change);
 </p>
+
 <h3>
   4. Run the line below to change the USB rules:
 </h3>
@@ -70,6 +71,7 @@ https://dev.px4.io/master/en/companion_computer/pixhawk_companion.html#hardware-
 <pre>
   <code>$ sudo nano /etc/udev/rules.d/99-pixhawk.rules
 </code></pre>
+
 <h3>
   5. Enter this line with the correct ID code:
 </h3>
@@ -78,8 +80,9 @@ https://dev.px4.io/master/en/companion_computer/pixhawk_companion.html#hardware-
 <pre>
   <code>$ SUBSYSTEM=="tty", ATTRS{idVendor}=="HERE", ATTRS{idProduct}=="HERE", SYMLINK+="ttyPix4"
 </code></pre>
+
 <h3>
-6. Run these commands to update and upgrade the packages in the Raspberry Pi 4 : 
+  6. Run these commands to update and upgrade the packages in the Raspberry Pi 4 : 
 </h3>
 <pre>
   <code>$ sudo apt-get install screen python-wxgtk3.0 python-matplotlib python-opencv python-pip python-numpy python-dev libxml2-dev libxslt-dev
@@ -90,8 +93,10 @@ https://dev.px4.io/master/en/companion_computer/pixhawk_companion.html#hardware-
   $ sudo apt-get upgrade
   $ sudo reboot now   (This step is necessary to compile all the changes)
 </code></pre>
+
 <h3>
-  7. Test the connection between Pixhawk and Raspberry Pi 4: 
+  7. Test the connection between Pixhawk and Raspberry Pi 4:
+  (change the IP Addresses accordingly with your network. Furthermore for no IPAddress issues make it static, please see: https://www.makeuseof.com/raspberry-pi-set-static-ip/)
 </h3>
 
 ---
@@ -100,8 +105,28 @@ https://dev.px4.io/master/en/companion_computer/pixhawk_companion.html#hardware-
   $ mavproxy.py --master=/dev/ttyPix4 --baudrate 921600 --out=udp:0.0.0.0:14550 --out=udp:0.0.0.0:14551 --aircraft MyCopter
   ("--aircraft" will be the folder to store the log files.)
 </code></pre>
+
 <h3>
-8. Install SSH on a Linux machine:
+  8. Enable SSH on Raspberry Pi 4:
+</h3>
+  
+---
+<pre>
+  <code>$ raspi-config
+</code></pre>
+
+<h3>
+  9. Go to [ Interfacing Options > SSH > Yes > Finish ]. And now reboot:
+</h3>
+
+---
+<pre>
+  <code>$ sudo reboot now
+</code></pre>
+
+# LINUX Machine:
+<h3>
+  10. Install SSH on a Linux machine:
 </h3>
 
 ---
@@ -112,23 +137,7 @@ or
 <pre>
   <code>$ sudo apt-get install openssh-client
 </code></pre>
-<h3>
-  9. Enable SSH on Raspberry Pi 4:
-</h3>
-  
----
-<pre>
-  <code>$ raspi-config
-</code></pre>
 
-<h3>
-  10. Go to [ Interfacing Options > SSH > Yes > Finish ]. And now reboot:
-</h3>
-
----
-<pre>
-  <code>$ sudo reboot now
-</code></pre>
 <h3>
   11. In the Host pc, another LINUX computer, install the MAVproxy and DroneKit:
 </h3>
@@ -139,6 +148,7 @@ or
   $ sudo -H pip3 install dronekit
   $ sudo -H pip3 install pymavlink
 </code></pre>
+
 <h3>
   12. Clone the dronekit-python repository in the Host PC (Linux recommended): 
 </h3>
@@ -147,6 +157,7 @@ or
 <pre>
   <code>$ git clone https://github.com/dronekit/dronekit-python.git
 </code></pre>
+
 <h3>
   13. Use the code magnetometer.py in the folder Examples/ to take the values of the magnetometer sensor as an example.
 </h3>
@@ -158,10 +169,11 @@ or
 
 ---
 <pre>
-  <code>$ python3 mag_pix4.py --connect "0.0.0.0:14551"
+  <code>$ python3 magnetometer.py --connect "0.0.0.0:14551"
 </code></pre>
 
 ---
+
 <h3>
 References
 </h3>
