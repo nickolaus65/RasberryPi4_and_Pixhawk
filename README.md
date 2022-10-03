@@ -60,7 +60,7 @@ https://dev.px4.io/master/en/companion_computer/pixhawk_companion.html#hardware-
   <code>$ lsusb
 </code></pre>
 <p>
-  The device ID is important to the next step (the ID number is likely to change);
+  The device ID is important for the next step (the ID number is likely to change);
 </p>
 
 <h3>
