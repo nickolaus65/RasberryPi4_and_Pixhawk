@@ -6,6 +6,7 @@ This report instructs how to make the connection between a Pixhawk (all versions
   
 The information below is valid only to the OS: **Linux (recommend Ubuntu 20.04 or later).** and **RASPBIAN**
 </p>
+---
 <h3>
   # Pixhawk:
 </h3>
