@@ -54,8 +54,6 @@ https://dev.px4.io/master/en/companion_computer/pixhawk_companion.html#hardware-
 <h3>
  # Raspberry Pi4:
 </h3>
-
----
 <h3>
   3. Run the code below to see which USB port the Pixhawk is connected: 
 </h3>
