@@ -8,9 +8,7 @@ The information below is valid only to the OS: **Linux (recommend Ubuntu 20.04 o
 </p>
 
 ---
-<h3>
-  # Pixhawk:
-</h3>
+# Pixhawk:
 <h3>
   1. Connect the Pixhawk with QGroundControl and configure the following Pixhawk parameters:
 </h3>
