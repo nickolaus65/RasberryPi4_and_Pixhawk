@@ -38,6 +38,7 @@ The information below is valid only to the OS: **Linux (recommend Ubuntu 20.04 o
 **CBRK_IO_SAFETY = no check**
 
 </p>
+
 ---
 <h3>
   2. Telemetry connection.
